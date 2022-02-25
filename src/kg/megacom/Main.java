@@ -34,8 +34,13 @@ public class Main {
             String userAnswer = sc.next();
 
             Boolean value = innerMap.get(userAnswer);
-            String answerText = value ? "Верно" : "Неверно";
-            System.out.println(answerText);
+            if (innerMap.containsKey(answers)){
+                String answerText = value ? "Верно" : "Неверно";
+                System.out.println(answerText);
+            } else {
+                System.out.println("Нет такого ответа");
+            }
+
         }
 
         /*
