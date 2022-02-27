@@ -1,6 +1,6 @@
-package kg.megacom.service.impl;
+package com.company.service.impl;
 
-import kg.megacom.service.TestService;
+import com.company.service.TestService;
 
 import java.util.*;
 

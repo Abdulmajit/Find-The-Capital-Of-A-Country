@@ -1,8 +1,7 @@
-package kg.megacom;
+package com.company;
 
-import kg.megacom.service.TestService;
+import com.company.service.TestService;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -35,7 +34,7 @@ public class Main {
         testService.addAnswers("Украина", "Луганск", false);
         testService.addAnswers("Украина", "Киев", true);
 
-        List<Map.Entry<String, Map<String, Boolean>>> questions = testService.getQuestions(3);
+        List<Map.Entry<String, Map<String, Boolean>>> questions = testService.getQuestions(4);
 
         int countAns = 0;
 
@@ -67,55 +66,7 @@ public class Main {
 
         int d = (100 / questions.size()) * countAns;
 
-        System.out.println(d);
-
-
-//        Scanner sc = new Scanner(System.in);
-//
-//        Map<String, Boolean> answers = new HashMap<>();
-//        answers.put("Бишкек", true);
-//        answers.put("Лондон", false);
-//        answers.put("париж", false);
-//
-//        Map<String, Map<String, Boolean>> questions = new HashMap<>();
-//        questions.put("Кыргызстан", answers);
-//
-//        for (Map.Entry<String, Map<String, Boolean>> item : questions.entrySet()) {
-//            System.out.println("Столица " + item.getKey());
-//
-//            Map<String, Boolean> innerMap = item.getValue();
-//            int row = 1;
-//            for (Map.Entry<String, Boolean> innerItem : innerMap.entrySet()) {
-//                System.out.println(row + ". " + innerItem.getKey());
-//                row++;
-//            }
-//            System.out.print("Введите название столицы: ");
-//            String userAnswer = sc.next();
-//
-//            Boolean value = innerMap.get(userAnswer);
-//            if (value != null){
-//                String answerText = value ? "Верно" : "Неверно";
-//                System.out.println(answerText);
-//            }else
-//                System.out.println("Нет такого ответа");
-//
-//
-//        }
-//
-//        /*
-//            Столица Кыргызстан
-//            1. Бишкек
-//            2. Лондон
-//            3. Париж
-//
-//            Ответ: Париж
-//
-//            Неверно!
-//
-//            10 - 100%
-//
-//        * */
-//
+        System.out.println("Ваш балл " +  d + " %");
 
     }
 }

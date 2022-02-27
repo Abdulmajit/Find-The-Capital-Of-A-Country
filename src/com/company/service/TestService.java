@@ -1,6 +1,6 @@
-package kg.megacom.service;
+package com.company.service;
 
-import kg.megacom.service.impl.TestServiceImpl;
+import com.company.service.impl.TestServiceImpl;
 
 import java.util.List;
 import java.util.Map;
